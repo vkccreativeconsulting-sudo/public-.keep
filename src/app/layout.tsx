@@ -1,10 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Bebas_Neue, Rajdhani } from "next/font/google";
+import { Bebas_Neue, Pacifico, Rajdhani } from "next/font/google";
 import "maplibre-gl/dist/maplibre-gl.css";
 import "./globals.css";
 
 const display = Bebas_Neue({ weight: "400", subsets: ["latin"], variable: "--font-display", display: "swap" });
 const hud = Rajdhani({ weight: ["500", "600", "700"], subsets: ["latin"], variable: "--font-hud", display: "swap" });
+const script = Pacifico({ weight: "400", subsets: ["latin"], variable: "--font-script", display: "swap" });
 
 export const metadata: Metadata = {
   title: "VICE CITY AIRWATCH — Live GTA VI Blimp Tracker",
@@ -31,7 +32,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${display.variable} ${hud.variable} h-full antialiased`}>
+    <html lang="en" className={`${display.variable} ${hud.variable} ${script.variable} h-full antialiased`}>
       <body className="h-full overflow-hidden">{children}</body>
     </html>
   );

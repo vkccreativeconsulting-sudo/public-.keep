@@ -14,6 +14,7 @@
   --color-vc-teal: #19a7b8;
   --font-display: var(--font-display), "Impact", "Arial Narrow", sans-serif;
   --font-hud: var(--font-hud), "Segoe UI", system-ui, sans-serif;
+  --font-script: var(--font-script), "Brush Script MT", cursive;
 }
 
 :root {
