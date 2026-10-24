@@ -133,6 +133,8 @@ export class BlimpMarkerController {
 
   private applyTransform() {
     const h = this.displayed?.heading ?? 0;
+    // Keep the hull lettering readable: flip it when the nose points east-ish.
+    this.element.classList.toggle("is-flipped", h > 0 && h < 180);
     this.rotor.style.transform = `rotate(${h}deg) scale(${this.scale})`;
     this.shadowRotor.style.transform = `translate(${(10 * this.scale).toFixed(1)}px, ${(14 * this.scale).toFixed(1)}px) rotate(${h}deg) scale(${this.scale})`;
   }

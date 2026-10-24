@@ -837,13 +837,21 @@ body {
   width: 100%;
   height: 100%;
   animation: blimp-float 4.2s ease-in-out infinite;
-  filter: drop-shadow(0 0 7px rgba(255, 45, 149, 0.6)) drop-shadow(0 0 1px rgba(27, 11, 51, 0.9));
+  filter: drop-shadow(0 0 8px rgba(255, 45, 149, 0.75)) drop-shadow(0 0 1px rgba(21, 18, 28, 0.9));
   transition: filter 0.4s;
 }
 .blimp-float svg {
   width: 100%;
   height: 100%;
   display: block;
+}
+.blimp-text {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+.blimp-marker.is-flipped .blimp-text {
+  transform: rotate(180deg);
 }
 .blimp-shadow {
   width: 100%;
@@ -879,7 +887,7 @@ body {
   animation-duration: 4.5s;
 }
 .blimp-marker[data-status="LAST_SEEN"] .blimp-float {
-  filter: saturate(0.55) brightness(0.92) drop-shadow(0 0 6px rgba(255, 209, 102, 0.5));
+  filter: brightness(0.85) drop-shadow(0 0 7px rgba(255, 209, 102, 0.6));
 }
 .blimp-marker[data-status="OFFLINE"] .blimp-pulse {
   display: none;
